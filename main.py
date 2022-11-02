@@ -51,28 +51,28 @@ while True:
 
         if choice == '1':
             numadd=Calculate.add(num1, num2)
-            logging.debug(f'콘솔 출력 : {num1} + {num2} = {numadd}')
-            logging.info(f'파일 출력 : {num1} + {num2} = {numadd}')
+            #logging.debug(f'콘솔 출력 : {num1} + {num2} = {numadd}')
+            logging.info(f'{num1} + {num2} = {numadd}')
             
 
         elif choice == '2':
             numsub=Calculate.subtract(num1,num2)
-            logging.debug(f'콘솔 출력 : {num1} - {num2} = {numsub}')
-            logging.info(f'파일 출력 : {num1} - {num2} = {numsub}')
+            #logging.debug(f'콘솔 출력 : {num1} - {num2} = {numsub}')
+            logging.info(f'{num1} - {num2} = {numsub}')
 
         elif choice == '3':
             nummul=Calculate.multiply(num1, num2)
-            logging.debug(f'콘솔 출력 : {num1} * {num2} = {numadd}')
-            logging.info(f'파일 출력 : {num1} * {num2} = {numadd}')
+            #logging.debug(f'콘솔 출력 : {num1} * {num2} = {numadd}')
+            logging.info(f'{num1} * {num2} = {numadd}')
             
         elif choice == '4':
             if num2 == 0:
-                logging.debug('잘못된 입력입니다 제수가 0이 되면 안됩니다')
+                #logging.debug('잘못된 입력입니다 제수가 0이 되면 안됩니다')
                 logging.info('잘못된 입력입니다 제수가 0이 되면 안됩니다')
             else:
                 numdiv=Calculate.divide(num1,num2)
-                logging.debug(f'콘솔 출력 : {num1} / {num2} = {numdiv}')
-                logging.info(f'파일 출력 : {num1} / {num2} = {numdiv}')
+                #logging.debug(f'콘솔 출력 : {num1} / {num2} = {numdiv}')
+                logging.info(f'{num1} / {num2} = {numdiv}')
                     
         else:
             logging.info(f'파일 출력 : 연산 선택은 1,2,3,4만 가능합니다')    
