@@ -17,15 +17,15 @@ logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
 # 콘솔 출력을 지정합니다
-ch = logging.StreamHandler()
-ch.setLevel(logging.DEBUG)
+#ch = logging.StreamHandler()
+#ch.setLevel(logging.DEBUG)
 
 # 파일 출력을 지정합니다.
-fh = logging.FileHandler(filename="Calclog.txt")
+fh = logging.FileHandler(filename="Calclog.log")
 fh.setLevel(logging.INFO)
 
 # add ch to logger
-logger.addHandler(ch)
+#logger.addHandler(ch)
 logger.addHandler(fh)
 
 
@@ -63,7 +63,7 @@ while True:
         elif choice == '3':
             nummul=Calculate.multiply(num1, num2)
             #logging.debug(f'콘솔 출력 : {num1} * {num2} = {numadd}')
-            logging.info(f'{num1} * {num2} = {numadd}')
+            logging.info(f'{num1} * {num2} = {nummul}')
             
         elif choice == '4':
             if num2 == 0:
@@ -86,6 +86,12 @@ while True:
             next_sure=next_sure.lower()
             if next_sure == "yes":
                 break
+            
+        elif next_calculation == "yes":
+            continue
+            
+        else:
+            logging.info('다시 입력해주세요')    
         
 
     else:
